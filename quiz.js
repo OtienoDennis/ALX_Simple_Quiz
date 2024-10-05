@@ -1,10 +1,12 @@
 function checkAnswer () {
     let correctAnswer = "4";
-    let userAnswer = document.querySelector( '[name="quiz"]:checked' ).value;
+    let feedback = document.getElementById( "feedback" )
+    let userAnswer = document.querySelector( '[name="quiz"]:checked' );
+    userAnswer = userAnswer.value
     if ( userAnswer === correctAnswer ) {
-        document.getElementById( "feedback" ).textContent = "Correct, Well done.";
+        feedback.textContent = "Correct, Well done.";
     } else {
-        document.getElementById( "feedback" ).textContent = "That's incorrect. Try again!";
+        feedback.textContent = "That's incorrect. Try again!";
     }
 }
 
